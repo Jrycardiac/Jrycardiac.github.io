@@ -1,0 +1,27 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>问题汇总 - Tag - Zoey&#39;s Blog 你笑起来真像好天气</title>
+        <link>https://Jrycardiac.github.io/tags/%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
+        <description>问题汇总 - Tag - Zoey&#39;s Blog 你笑起来真像好天气</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>cardiac.outlook.com (Zoey)</managingEditor>
+            <webMaster>cardiac.outlook.com (Zoey)</webMaster><lastBuildDate>Wed, 02 Jan 2019 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Jrycardiac.github.io/tags/%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/" rel="self" type="application/rss+xml" /><item>
+    <title>初学git的踩坑之路</title>
+    <link>https://Jrycardiac.github.io/git-solve/</link>
+    <pubDate>Wed, 02 Jan 2019 00:00:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>https://Jrycardiac.github.io/git-solve/</guid>
+    <description><![CDATA[初学git之路问题总结 当我下定不学会不罢休的决心学习git的时候出现了一个又一个的错误
+下面是我亲手解决之后的总结
+ 我究竟遇到了那些错误?  对git常用语法不熟悉导致的低级错误  对于几乎不使用命令行的我来说简直是死亡一般的灾难 之后花了点时间大致读了一下git&ndash;help，才避免了这些低级错误   出现错误提示  1 2 3  error: src refspec master does not match any. error: failed to push some refs to   常见原因：
+1.本地git仓库目录下为空
+2.本地仓库add后未commit
+3.git init错误
+4.在GitHub上面添加了README.MD文件之后，需要重新进行更新
+解决办法：
+1.控制面板打开文件夹选项 打开隐藏文件和文件夹显示
+2.到本地仓库目录下查看是否有.git文件夹——无 则git init
+3.看.git文件夹下是否有之前提交的文件——若无 则重新 git commit (如果之前git add过的话 没有就要重新 add commit)
+4.在git-push 之前添加 git-pull 操作之后，重新进行push操作
+ git commit 时，出现错误  1  error: Error building trees   解决办法：]]></description>
+</item></channel>
+</rss>
