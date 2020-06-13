@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Zoey&#39;s Blog 你笑起来真像好天气</title>
@@ -97,3 +98,19 @@
 1 2 3 4 5 6 7 8 9 10  /*3.animation-timing-function：动画播放速率曲线*/ /*-webkit-animation-timing-function: linear;*/ /*-moz-animation-timing-function: linear;*/ /*-o-animation-timing-function: linear;*/ /*animation-timing-function: linear;*/ /*其他可选值：ease | linear | ease-in | ease-out | ease-in-out*/   这里解释一下ease ease-in等的表示含义 这些是控制移动的方式也可以说是速度，在我的代码块中提到的是ease-out 表示的是以缓慢结束的方式移动，ease-in相反的就是以缓慢开始的方式移动。 另外animation的属性还有好多好多这里就不一一列举了。]]></description>
 </item></channel>
 </rss>
+=======
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>你笑起来真像好天气</title>
+    <link>https://jrycardiac.github.io/</link>
+    <description>Recent content on 你笑起来真像好天气</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://jrycardiac.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
+>>>>>>> fcff1f6d6472ca066b14ff666fb33a5eb35de8bc

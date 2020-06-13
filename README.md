@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Your Favicon Package
 
 This package was generated with [RealFaviconGenerator](https://realfavicongenerator.net/) [v0.16](https://realfavicongenerator.net/change_log#v0.16)
@@ -19,3 +20,6 @@ Insert the following code in the `head` section of your pages:
     <meta name="theme-color" content="#ffffff">
 
 *Optional* - Check your favicon with the [favicon checker](https://realfavicongenerator.net/favicon_checker)
+=======
+# Jrycardiac.github.io
+>>>>>>> fcff1f6d6472ca066b14ff666fb33a5eb35de8bc

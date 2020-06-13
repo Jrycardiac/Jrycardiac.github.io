@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<<<<<<< HEAD
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	
 	<sitemap>
@@ -19,3 +20,21 @@
 	</sitemap>
 	
 </sitemapindex>
+=======
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://jrycardiac.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jrycardiac.github.io/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://jrycardiac.github.io/</loc>
+  </url>
+  
+</urlset>
+>>>>>>> fcff1f6d6472ca066b14ff666fb33a5eb35de8bc
