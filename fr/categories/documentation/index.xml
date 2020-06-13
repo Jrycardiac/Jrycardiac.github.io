@@ -1,8 +1,0 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Documentation - Catégorie - Mon nouveau site Hugo</title>
-        <link>https://Jrycardiac.github.io/fr/categories/documentation/</link>
-        <description>Documentation - Catégorie - Mon nouveau site Hugo</description>
-        <generator>Hugo -- gohugo.io</generator><language>fr</language><managingEditor>cardiac.outlook.com (Zoey)</managingEditor>
-            <webMaster>cardiac.outlook.com (Zoey)</webMaster><atom:link href="https://Jrycardiac.github.io/fr/categories/documentation/" rel="self" type="application/rss+xml" /></channel>
-</rss>
