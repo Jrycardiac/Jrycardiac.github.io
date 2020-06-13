@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>SQL安装总结 - Zoey&#39;s Blog 你笑起来真像好天气</title><meta name="Description" content=""><meta property="og:title" content="SQL安装总结" />
+<meta property="og:description" content="SQL server 2017 安装过程问题总结   首先推荐一个非常好用的公众号——软件安装管家。   大部分我们常用的软件破解版都可以在这里找到。当然我安装SQL server 2017 安装包以及教程都是在这个公众号找到的。在此附上连接
+  之后按照安装教程一步一步进行，有几个重要的步骤需要注意。    在你想要安装的盘中新建文件夹jre 1.8，可将软件更改安装位置，这个对于之前安装位置错误还是有很大的帮助的。   修改path环境变量时，发现我的电脑中弹出的并非一条属性值，而是多条，这样就不知道该如何修改了。
+解决办法：可将教程中需要修改的直接添加，然后将刚添加的属性值直接移到开头，便可以解决问题啦。（JDK的安装应该在之前学JAVA的时候就已经安装好了，后来出现问题，在命令行窗口中 执行 “java”命令即可验证。）
+  安装SQL server ,在进行这一步时不能安装教程来勾选全选，这样后面的步骤中会出现错误提示: R服务相关未完成之类的。
+解决办法： 带有‘R’的选项全部不选。
+  接下来按照教程一步步进行就没问题啦。但是SQL server 安装成功之后，并不是我们课上使用的工具。我们需要的是SQL的manage 工具。所以打开一开始的安装中心界面点击第二条安装即可。  其实有了上面的安装包和安装教程就已经成功了90%，只需要注意我上面提到的几点再结合教程认真一步一步来，安装还是很容易的. " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Jrycardiac.github.io/test1/" />
+<meta property="article:published_time" content="2019-04-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-04-16T00:00:00+00:00" /><meta property="og:site_name" content="Zoey&#39;s Blog 你笑起来真像好天气" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SQL安装总结"/>
+<meta name="twitter:description" content="SQL server 2017 安装过程问题总结   首先推荐一个非常好用的公众号——软件安装管家。   大部分我们常用的软件破解版都可以在这里找到。当然我安装SQL server 2017 安装包以及教程都是在这个公众号找到的。在此附上连接
+  之后按照安装教程一步一步进行，有几个重要的步骤需要注意。    在你想要安装的盘中新建文件夹jre 1.8，可将软件更改安装位置，这个对于之前安装位置错误还是有很大的帮助的。   修改path环境变量时，发现我的电脑中弹出的并非一条属性值，而是多条，这样就不知道该如何修改了。
+解决办法：可将教程中需要修改的直接添加，然后将刚添加的属性值直接移到开头，便可以解决问题啦。（JDK的安装应该在之前学JAVA的时候就已经安装好了，后来出现问题，在命令行窗口中 执行 “java”命令即可验证。）
+  安装SQL server ,在进行这一步时不能安装教程来勾选全选，这样后面的步骤中会出现错误提示: R服务相关未完成之类的。
+解决办法： 带有‘R’的选项全部不选。
+  接下来按照教程一步步进行就没问题啦。但是SQL server 安装成功之后，并不是我们课上使用的工具。我们需要的是SQL的manage 工具。所以打开一开始的安装中心界面点击第二条安装即可。  其实有了上面的安装包和安装教程就已经成功了90%，只需要注意我上面提到的几点再结合教程认真一步一步来，安装还是很容易的. "/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Jrycardiac.github.io/test1/" /><link rel="prev" href="https://Jrycardiac.github.io/wx-week4/" /><link rel="next" href="https://Jrycardiac.github.io/sweetplus/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "SQL安装总结",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/Jrycardiac.github.io\/test1\/"
+        },"genre": "posts","keywords": "SQL, stallment","wordcount":  27 ,
+        "url": "https:\/\/Jrycardiac.github.io\/test1\/","datePublished": "2019-04-16T00:00:00+00:00","dateModified": "2019-04-16T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "     \"Zoey\""
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Zoey&#39;s Blog 你笑起来真像好天气"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="Zoey%27s%20Blog"
+        data-srcset="Zoey%27s%20Blog, Zoey%27s%20Blog 1.5x, Zoey%27s%20Blog 2x"
+        data-sizes="auto"
+        alt="Zoey&#39;s Blog"
+        title="Zoey&#39;s Blog" /></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/test1/" selected>English</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Zoey&#39;s Blog 你笑起来真像好天气"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="Zoey%27s%20Blog"
+        data-srcset="Zoey%27s%20Blog, Zoey%27s%20Blog 1.5x, Zoey%27s%20Blog 2x"
+        data-sizes="auto"
+        alt="Zoey&#39;s Blog"
+        title="Zoey&#39;s Blog" /></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/test1/" selected>English</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">SQL安装总结</h1><h2 class="single-subtitle">SQL安装问题总结</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>     "Zoey"</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw"></i>Tech</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-04-16">2019-04-16</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;27 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#首先推荐一个非常好用的公众号软件安装管家">首先推荐一个非常好用的公众号——软件安装管家。</a></li>
+    <li><a href="#之后按照安装教程一步一步进行有几个重要的步骤需要注意">之后按照安装教程一步一步进行，有几个重要的步骤需要注意。</a></li>
+    <li><a href="#其实有了上面的安装包和安装教程就已经成功了90只需要注意我上面提到的几点再结合教程认真一步一步来安装还是很容易的">其实有了上面的安装包和安装教程就已经成功了90%，只需要注意我上面提到的几点再结合教程认真一步一步来，安装还是很容易的.</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="sql-server-2017--安装过程问题总结">SQL server 2017  安装过程问题总结</h1>
+<ul>
+<li>
+<h2 id="首先推荐一个非常好用的公众号软件安装管家">首先推荐一个非常好用的公众号——软件安装管家。</h2>
+</li>
+</ul>
+<p>大部分我们常用的软件破解版都可以在这里找到。当然我安装SQL server 2017
+安装包以及教程都是在这个公众号找到的。<a href="https://mp.weixin.qq.com/s?__biz=MzIwMjE1MjMyMw==&amp;mid=2650199061&amp;idx=1&amp;sn=5b8a140237d95929fbcaed26800c3ef5&amp;chksm=8ee174f9b996fdef42a525a844a83864dad22ec741302a0d3ddd0d58c29d0b5b70c2671102bb&amp;mpshare=1&amp;scene=23&amp;srcid=0319EtNegXdmVgb6IZEHlmUZ#rd" target="_blank" rel="noopener noreffer">在此附上连接</a></p>
+<ul>
+<li>
+<h2 id="之后按照安装教程一步一步进行有几个重要的步骤需要注意">之后按照安装教程一步一步进行，有几个重要的步骤需要注意。</h2>
+</li>
+</ul>
+<ol>
+<li>在你想要安装的盘中新建文件夹jre 1.8，可将软件更改安装位置，这个对于之前安装位置错误还是有很大的帮助的。</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://img-blog.csdnimg.cn/20190416113158120.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        data-srcset="https://img-blog.csdnimg.cn/20190416113158120.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70, https://img-blog.csdnimg.cn/20190416113158120.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 1.5x, https://img-blog.csdnimg.cn/20190416113158120.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 2x"
+        data-sizes="auto"
+        alt="https://img-blog.csdnimg.cn/20190416113158120.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        title="在这里插入图片描述" /></p>
+<ol start="2">
+<li>
+<p>修改path环境变量时，发现我的电脑中弹出的并非一条属性值，而是多条，这样就不知道该如何修改了。</p>
+<p><strong>解决办法</strong>：可将教程中需要修改的直接添加，然后将刚添加的属性值直接移到开头，便可以解决问题啦。（JDK的安装应该在之前学JAVA的时候就已经安装好了，后来出现问题，在命令行窗口中 执行 “java”命令即可验证。）</p>
+</li>
+<li>
+<p>安装SQL server ,在进行这一步时不能安装教程来勾选全选，这样后面的步骤中会出现错误提示: R服务相关未完成之类的。</p>
+<p><strong>解决办法</strong>： 带有‘R’的选项全部不选。</p>
+</li>
+</ol>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://img-blog.csdnimg.cn/20190416114013198.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        data-srcset="https://img-blog.csdnimg.cn/20190416114013198.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70, https://img-blog.csdnimg.cn/20190416114013198.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 1.5x, https://img-blog.csdnimg.cn/20190416114013198.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 2x"
+        data-sizes="auto"
+        alt="https://img-blog.csdnimg.cn/20190416114013198.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        title="在这里插入图片描述" /></p>
+<ol start="4">
+<li>接下来按照教程一步步进行就没问题啦。但是SQL server 安装成功之后，并不是我们课上使用的工具。我们需要的是SQL的manage
+工具。所以打开一开始的安装中心界面点击第二条安装即可。</li>
+</ol>
+<h2 id="其实有了上面的安装包和安装教程就已经成功了90只需要注意我上面提到的几点再结合教程认真一步一步来安装还是很容易的">其实有了上面的安装包和安装教程就已经成功了90%，只需要注意我上面提到的几点再结合教程认真一步一步来，安装还是很容易的.</h2>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2019-04-16</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/test1/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://Jrycardiac.github.io/test1/" data-title="SQL安装总结" data-via="xxxx" data-hashtags="SQL,stallment"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://Jrycardiac.github.io/test1/" data-hashtag="SQL"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://Jrycardiac.github.io/test1/" data-title="SQL安装总结" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://Jrycardiac.github.io/test1/" data-title="SQL安装总结"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://Jrycardiac.github.io/test1/" data-title="SQL安装总结" data-ralateuid="@cardiac_yoyoyi"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="Share on Myspace" data-sharer="myspace" data-url="https://Jrycardiac.github.io/test1/" data-title="SQL安装总结" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="Share on Blogger" data-sharer="blogger" data-url="https://Jrycardiac.github.io/test1/" data-title="SQL安装总结" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="Share on Evernote" data-sharer="evernote" data-url="https://Jrycardiac.github.io/test1/" data-title="SQL安装总结"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/sql/">SQL</a>,&nbsp;<a href="/tags/stallment/">stallment</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/wx-week4/" class="prev" rel="prev" title="微信小程序 开发第四周"><i class="fas fa-angle-left fa-fw"></i>微信小程序 开发第四周</a>
+            <a href="/sweetplus/" class="next" rel="next" title="微信小程序开发总结">微信小程序开发总结<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">你笑起来真像好天气</div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.72.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Zoey</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

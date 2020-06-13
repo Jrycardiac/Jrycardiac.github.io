@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>微信小程序第二周周报 - Zoey&#39;s Blog 你笑起来真像好天气</title><meta name="Description" content=""><meta property="og:title" content="微信小程序第二周周报" />
+<meta property="og:description" content="微信小程序—尝试开发第二周 上周实现了一些基本的图片处理,这周继续页面进行改进。同时，和老师讨论之后，决定新增加社交功能以及自己搭配配方等功能。  微信小程序轮播图的实现 如果对之前js的轮播图掌握较好的话，那么对照小程序官方文档应该是容易掌握的。下面直接贴代码了。 index. js:  1 2 3 4 5 6  data: { indicatorDots: false, autoplay: false, //是否自动切换 interval: 3000, //自动切换时间间隔 duration: 800, //滑动动画时常 },   index. wxml
+1 2 3 4 5 6 7 8 9  &lt;swiper indicator-dots=&#34;true&#34; autoplay=&#34;true&#34; interval=&#34;{{interval}}&#34; duration=&#34;{{duration}}&#34; circular=&#34;true&#34;&gt; &lt;block wx:for=&#34;{{productlists.bannerPic}}&#34; wx:key=&#34;{{index}}&#34;&gt; &lt;navigator url=&#34;details/details?pid={{item.pid}}&#34;&gt; &lt;swiper-item &gt; &lt;image src=&#34;{{item.imgUrls}}&#34; class=&#34;slide-image&#34; width=&#34;100%&#34; /&gt; &lt;/swiper-item&gt; &lt;/navigator&gt; &lt;/block&gt; &lt;/swiper&gt;   然后在.wxss文件里设置需要的高度和宽度即可。
+  json文件中 一些小细节 开发过程中&quot;navigationBarTextStyle&rdquo;: 后面填写颜色的十六进制码会报错 ，提示应该为“black”或“white”。 查阅文档发现，仅支持白和黑，我又一次弱智了?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Jrycardiac.github.io/wx-week2/" />
+<meta property="article:published_time" content="2019-03-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-25T00:00:00+00:00" /><meta property="og:site_name" content="Zoey&#39;s Blog 你笑起来真像好天气" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="微信小程序第二周周报"/>
+<meta name="twitter:description" content="微信小程序—尝试开发第二周 上周实现了一些基本的图片处理,这周继续页面进行改进。同时，和老师讨论之后，决定新增加社交功能以及自己搭配配方等功能。  微信小程序轮播图的实现 如果对之前js的轮播图掌握较好的话，那么对照小程序官方文档应该是容易掌握的。下面直接贴代码了。 index. js:  1 2 3 4 5 6  data: { indicatorDots: false, autoplay: false, //是否自动切换 interval: 3000, //自动切换时间间隔 duration: 800, //滑动动画时常 },   index. wxml
+1 2 3 4 5 6 7 8 9  &lt;swiper indicator-dots=&#34;true&#34; autoplay=&#34;true&#34; interval=&#34;{{interval}}&#34; duration=&#34;{{duration}}&#34; circular=&#34;true&#34;&gt; &lt;block wx:for=&#34;{{productlists.bannerPic}}&#34; wx:key=&#34;{{index}}&#34;&gt; &lt;navigator url=&#34;details/details?pid={{item.pid}}&#34;&gt; &lt;swiper-item &gt; &lt;image src=&#34;{{item.imgUrls}}&#34; class=&#34;slide-image&#34; width=&#34;100%&#34; /&gt; &lt;/swiper-item&gt; &lt;/navigator&gt; &lt;/block&gt; &lt;/swiper&gt;   然后在.wxss文件里设置需要的高度和宽度即可。
+  json文件中 一些小细节 开发过程中&quot;navigationBarTextStyle&rdquo;: 后面填写颜色的十六进制码会报错 ，提示应该为“black”或“white”。 查阅文档发现，仅支持白和黑，我又一次弱智了?"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Jrycardiac.github.io/wx-week2/" /><link rel="prev" href="https://Jrycardiac.github.io/wx-week1/" /><link rel="next" href="https://Jrycardiac.github.io/wx-week4/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "微信小程序第二周周报",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/Jrycardiac.github.io\/wx-week2\/"
+        },"genre": "posts","keywords": "微信小程序, 周报","wordcount":  174 ,
+        "url": "https:\/\/Jrycardiac.github.io\/wx-week2\/","datePublished": "2019-03-25T00:00:00+00:00","dateModified": "2019-03-25T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "     \"\""
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Zoey&#39;s Blog 你笑起来真像好天气"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="Zoey%27s%20Blog"
+        data-srcset="Zoey%27s%20Blog, Zoey%27s%20Blog 1.5x, Zoey%27s%20Blog 2x"
+        data-sizes="auto"
+        alt="Zoey&#39;s Blog"
+        title="Zoey&#39;s Blog" /></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/wx-week2/" selected>English</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Zoey&#39;s Blog 你笑起来真像好天气"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="Zoey%27s%20Blog"
+        data-srcset="Zoey%27s%20Blog, Zoey%27s%20Blog 1.5x, Zoey%27s%20Blog 2x"
+        data-sizes="auto"
+        alt="Zoey&#39;s Blog"
+        title="Zoey&#39;s Blog" /></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/wx-week2/" selected>English</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">微信小程序第二周周报</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>     ""</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw"></i>Tech</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-03-25">2019-03-25</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;174 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#上周实现了一些基本的图片处理这周继续页面进行改进同时和老师讨论之后决定新增加社交功能以及自己搭配配方等功能">上周实现了一些基本的图片处理,这周继续页面进行改进。同时，和老师讨论之后，决定新增加社交功能以及自己搭配配方等功能。</a></li>
+    <li><a href="#下周开发计划">下周开发计划</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="微信小程序尝试开发第二周">微信小程序—尝试开发第二周</h1>
+<h2 id="上周实现了一些基本的图片处理这周继续页面进行改进同时和老师讨论之后决定新增加社交功能以及自己搭配配方等功能">上周实现了一些基本的图片处理,这周继续页面进行改进。同时，和老师讨论之后，决定新增加社交功能以及自己搭配配方等功能。</h2>
+<ul>
+<li><strong>微信小程序轮播图的实现</strong>
+如果对之前js的轮播图掌握较好的话，那么对照小程序官方文档应该是容易掌握的。下面直接贴代码了。
+index. js:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"> data: {
+    indicatorDots: false,
+    autoplay: false,    //是否自动切换
+    interval: 3000,   //自动切换时间间隔
+    duration: 800,  //滑动动画时常
+  },
+</code></pre></td></tr></table>
+</div>
+</div><p>index. wxml</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">  &lt;swiper indicator-dots=&#34;true&#34; autoplay=&#34;true&#34; interval=&#34;{{interval}}&#34; duration=&#34;{{duration}}&#34; circular=&#34;true&#34;&gt;
+    &lt;block wx:for=&#34;{{productlists.bannerPic}}&#34; wx:key=&#34;{{index}}&#34;&gt;
+      &lt;navigator url=&#34;details/details?pid={{item.pid}}&#34;&gt;
+      &lt;swiper-item &gt;
+       &lt;image src=&#34;{{item.imgUrls}}&#34; class=&#34;slide-image&#34; width=&#34;100%&#34; /&gt;
+      &lt;/swiper-item&gt;
+       &lt;/navigator&gt;
+    &lt;/block&gt;
+  &lt;/swiper&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>然后在.wxss文件里设置需要的高度和宽度即可。</p>
+<ul>
+<li>
+<p>json文件中   一些小细节
+开发过程中&quot;navigationBarTextStyle&rdquo;: 后面填写颜色的十六进制码会报错 ，提示应该为“black”或“white”。  查阅文档发现，仅支持白和黑，我又一次弱智了?。</p>
+</li>
+<li>
+<p>分类界面设计</p>
+</li>
+</ul>
+<p>js文件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+Page({
+    data: {
+        category: [
+            {name:&#39;面包&#39;,id:&#39;guowei&#39;},
+            {name:&#39;饼干&#39;,id:&#39;shucai&#39;},
+            {name:&#39;蛋糕&#39;,id:&#39;chaohuo&#39;},
+            {name:&#39;冰淇淋&#39;,id:&#39;dianxin&#39;},
+            {name:&#39;饮料&#39;,id:&#39;cucha&#39;},
+            {name:&#39;原料管理&#39;,id:&#39;danfan&#39;}, //各类的名字以及id ，id方便后面使用。
+        ],
+        detail:[],
+        curIndex: 0,
+        isScroll: true,
+        toView: &#39;guowei&#39;  //第一个界面的类目
+    },
+    onReady(){
+        
+                this.setData({
+                  detail: mockData.catelists
+                })
+         
+        
+    },
+    switchTab(e){
+      const self = this;
+      this.setData({
+        isScroll: true   //局部滚动，tab栏切换
+      })
+      setTimeout(function(){    //定时器
+        self.setData({
+          toView: e.target.dataset.id,
+          curIndex: e.target.dataset.index
+        })
+      },0)
+      setTimeout(function () {
+        self.setData({
+          isScroll: false
+        })
+      },1)
+        
+    }
+    
+})
+</code></pre></td></tr></table>
+</div>
+</div><p>之后在wxss设置自己想要的样式就可以啦！</p>
+<h2 id="下周开发计划">下周开发计划</h2>
+<p>打算把 社交以及配料表和更改配方界面写完，云开发暂未提上日程。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2019-03-25</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/wx-week2/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://Jrycardiac.github.io/wx-week2/" data-title="微信小程序第二周周报" data-via="xxxx" data-hashtags="微信小程序,周报"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://Jrycardiac.github.io/wx-week2/" data-hashtag="微信小程序"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://Jrycardiac.github.io/wx-week2/" data-title="微信小程序第二周周报" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://Jrycardiac.github.io/wx-week2/" data-title="微信小程序第二周周报"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://Jrycardiac.github.io/wx-week2/" data-title="微信小程序第二周周报" data-ralateuid="@cardiac_yoyoyi"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="Share on Myspace" data-sharer="myspace" data-url="https://Jrycardiac.github.io/wx-week2/" data-title="微信小程序第二周周报" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="Share on Blogger" data-sharer="blogger" data-url="https://Jrycardiac.github.io/wx-week2/" data-title="微信小程序第二周周报" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="Share on Evernote" data-sharer="evernote" data-url="https://Jrycardiac.github.io/wx-week2/" data-title="微信小程序第二周周报"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a>,&nbsp;<a href="/tags/%E5%91%A8%E6%8A%A5/">周报</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/wx-week1/" class="prev" rel="prev" title="微信小程序第一周周报"><i class="fas fa-angle-left fa-fw"></i>微信小程序第一周周报</a>
+            <a href="/wx-week4/" class="next" rel="next" title="微信小程序 开发第四周">微信小程序 开发第四周<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">你笑起来真像好天气</div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.72.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Zoey</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

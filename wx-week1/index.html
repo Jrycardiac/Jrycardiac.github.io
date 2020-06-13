@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>微信小程序第一周周报 - Zoey&#39;s Blog 你笑起来真像好天气</title><meta name="Description" content=""><meta property="og:title" content="微信小程序第一周周报" />
+<meta property="og:description" content="微信小程序-尝试开发第一周 刚开始开发小程序流的泪和犯的蠢  使用tabBar建立底部导航栏时图标上传失败 导入图标的时候，一直出现&hellip;jpg文件不存在，上传失败等这样的错误(忘了截图求放过），后来仔细检查，以及阅读小程序文档发现图标大小超过40KB,无法上传，于是修改了图标大小，完美解决。小程序文档还是要仔细读一读的！  逗号 以及是否支持注释 在写.json的配置文件以及.js文件中data的配置时，要注意最后一个括号中的语句是不加逗号的。（虽然很低级的错误，但我经常犯，也真的很无奈了)还有一点就是json文件是不支持加注释的。  在页面中添加背景图片  ***前来更新 ，屡次尝试之后发现官方给的云开发的例子中的添加图片方式并不能在手机端显示（应该我尝试过程中出现了问题，但一直没有解决），所以去找文档，发现图片处理应该直接用&lt;image&gt;来写，而且url图片路径中不能出现中文，使用本地图片的src应该使用绝对路径。
+一把辛酸泪，好好读文档才是最重要的
+我其实在这个方面浪费了挺长时间的，一开始在wxss文件中添加image属性，无果，后来在wxml文件的模块中尝试直接添加style=&quot;background-image= &hellip;..&quot;,问题还是没有解决。。然后百度一下，发现答案不外乎下面这几种： 但这些方法要么麻烦（比如那个base64)要么没用（比如我之前试过的），所以我还是决定去瞧瞧官方给的例子，果不其然！ 好吧，完美解决。之前尝试失败的原因居然是 url。还有一个要注意的是，语句 background-size: cover 功能是背景图片自动缩小比例适配模块，妈妈再也不用担心我得手动调整图片比例了：）
+  出现错误json文件找不到 错误显示未找到文件，但我清楚地看到文件在那里，里面内容也没报错啊。百度无果。最后惊醒自己刚刚好像改了整个文件所在文件夹的名字&hellip;改回名字，问题解决。这一天天的都是些什么错误呀。
+  小程序text文本换行 \n   text文本居中 使用flex 关键性语句justify-content：center;  display: flex; align-items: center; justify-content：center;
+  尝试的第一周的学习成果 模型图、第一个界面的完成以及小程序的基本架构 在这里插入图片描述下周学习计划 这周主要用来做小程序模型图和首页前端，对于真正的开发还没有开始吧。
+下周会在界面写完学有余力的情况下学习云函数、云开发。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Jrycardiac.github.io/wx-week1/" />
+<meta property="article:published_time" content="2019-03-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-17T00:00:00+00:00" /><meta property="og:site_name" content="Zoey&#39;s Blog 你笑起来真像好天气" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="微信小程序第一周周报"/>
+<meta name="twitter:description" content="微信小程序-尝试开发第一周 刚开始开发小程序流的泪和犯的蠢  使用tabBar建立底部导航栏时图标上传失败 导入图标的时候，一直出现&hellip;jpg文件不存在，上传失败等这样的错误(忘了截图求放过），后来仔细检查，以及阅读小程序文档发现图标大小超过40KB,无法上传，于是修改了图标大小，完美解决。小程序文档还是要仔细读一读的！  逗号 以及是否支持注释 在写.json的配置文件以及.js文件中data的配置时，要注意最后一个括号中的语句是不加逗号的。（虽然很低级的错误，但我经常犯，也真的很无奈了)还有一点就是json文件是不支持加注释的。  在页面中添加背景图片  ***前来更新 ，屡次尝试之后发现官方给的云开发的例子中的添加图片方式并不能在手机端显示（应该我尝试过程中出现了问题，但一直没有解决），所以去找文档，发现图片处理应该直接用&lt;image&gt;来写，而且url图片路径中不能出现中文，使用本地图片的src应该使用绝对路径。
+一把辛酸泪，好好读文档才是最重要的
+我其实在这个方面浪费了挺长时间的，一开始在wxss文件中添加image属性，无果，后来在wxml文件的模块中尝试直接添加style=&quot;background-image= &hellip;..&quot;,问题还是没有解决。。然后百度一下，发现答案不外乎下面这几种： 但这些方法要么麻烦（比如那个base64)要么没用（比如我之前试过的），所以我还是决定去瞧瞧官方给的例子，果不其然！ 好吧，完美解决。之前尝试失败的原因居然是 url。还有一个要注意的是，语句 background-size: cover 功能是背景图片自动缩小比例适配模块，妈妈再也不用担心我得手动调整图片比例了：）
+  出现错误json文件找不到 错误显示未找到文件，但我清楚地看到文件在那里，里面内容也没报错啊。百度无果。最后惊醒自己刚刚好像改了整个文件所在文件夹的名字&hellip;改回名字，问题解决。这一天天的都是些什么错误呀。
+  小程序text文本换行 \n   text文本居中 使用flex 关键性语句justify-content：center;  display: flex; align-items: center; justify-content：center;
+  尝试的第一周的学习成果 模型图、第一个界面的完成以及小程序的基本架构 在这里插入图片描述下周学习计划 这周主要用来做小程序模型图和首页前端，对于真正的开发还没有开始吧。
+下周会在界面写完学有余力的情况下学习云函数、云开发。"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Jrycardiac.github.io/wx-week1/" /><link rel="prev" href="https://Jrycardiac.github.io/git-solve/" /><link rel="next" href="https://Jrycardiac.github.io/wx-week2/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "微信小程序第一周周报",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/Jrycardiac.github.io\/wx-week1\/"
+        },"genre": "posts","keywords": "周报, 微信小程序","wordcount":  36 ,
+        "url": "https:\/\/Jrycardiac.github.io\/wx-week1\/","datePublished": "2019-03-17T00:00:00+00:00","dateModified": "2019-03-17T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "     \"\""
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Zoey&#39;s Blog 你笑起来真像好天气"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="Zoey%27s%20Blog"
+        data-srcset="Zoey%27s%20Blog, Zoey%27s%20Blog 1.5x, Zoey%27s%20Blog 2x"
+        data-sizes="auto"
+        alt="Zoey&#39;s Blog"
+        title="Zoey&#39;s Blog" /></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/wx-week1/" selected>English</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Zoey&#39;s Blog 你笑起来真像好天气"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="Zoey%27s%20Blog"
+        data-srcset="Zoey%27s%20Blog, Zoey%27s%20Blog 1.5x, Zoey%27s%20Blog 2x"
+        data-sizes="auto"
+        alt="Zoey&#39;s Blog"
+        title="Zoey&#39;s Blog" /></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/wx-week1/" selected>English</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">微信小程序第一周周报</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>     ""</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw"></i>Tech</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-03-17">2019-03-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;36 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#刚开始开发小程序流的泪和犯的蠢">刚开始开发小程序流的泪和犯的蠢</a></li>
+    <li><a href="#尝试的第一周的学习成果">尝试的第一周的学习成果</a></li>
+    <li><a href="#下周学习计划">下周学习计划</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="微信小程序-尝试开发第一周">微信小程序-尝试开发第一周</h1>
+<h2 id="刚开始开发小程序流的泪和犯的蠢">刚开始开发小程序流的泪和犯的蠢</h2>
+<ul>
+<li>使用tabBar建立底部导航栏时图标上传失败
+导入图标的时候，一直出现&hellip;jpg文件不存在，上传失败等这样的错误(忘了截图求放过），后来仔细检查，以及阅读小程序文档发现图标大小超过40KB,无法上传，于是修改了图标大小，完美解决。小程序文档还是要仔细读一读的！
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://img-blog.csdnimg.cn/20190317020937476.png"
+        data-srcset="https://img-blog.csdnimg.cn/20190317020937476.png, https://img-blog.csdnimg.cn/20190317020937476.png 1.5x, https://img-blog.csdnimg.cn/20190317020937476.png 2x"
+        data-sizes="auto"
+        alt="https://img-blog.csdnimg.cn/20190317020937476.png"
+        title="https://img-blog.csdnimg.cn/20190317020937476.png" /></li>
+<li>逗号 以及是否支持注释
+在写.json的配置文件以及.js文件中data的配置时，要注意最后一个括号中的语句是不加逗号的。（虽然很低级的错误，但我经常犯，也真的很无奈了)还有一点就是json文件是不支持加注释的。
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://img-blog.csdnimg.cn/20190317021036909.png"
+        data-srcset="https://img-blog.csdnimg.cn/20190317021036909.png, https://img-blog.csdnimg.cn/20190317021036909.png 1.5x, https://img-blog.csdnimg.cn/20190317021036909.png 2x"
+        data-sizes="auto"
+        alt="https://img-blog.csdnimg.cn/20190317021036909.png"
+        title="https://img-blog.csdnimg.cn/20190317021036909.png" /></li>
+<li><strong>在页面中添加背景图片</strong></li>
+</ul>
+ <!-- wp:paragraph -->
+<p>***前来更新 ，屡次尝试之后发现官方给的云开发的例子中的<strong>添加图片方式</strong>并不能在手机端显示（应该我尝试过程中出现了问题，但一直没有解决），所以去找文档<strong>，发现图片处理应该直接用&lt;image&gt;来写，而且url图片路径中不能出现中文，使用本地图片的src应该使用绝对路径。</strong></p></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>一把辛酸泪，好好读文档才是最重要的</strong></p>
+<!-- /wp:paragraph -->
+<p>我其实在这个方面浪费了挺长时间的，一开始在wxss文件中添加image属性，无果，后来在wxml文件的模块中尝试直接添加style=&quot;background-image= &hellip;..&quot;,问题还是没有解决。。然后百度一下，发现答案不外乎下面这几种：
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://img-blog.csdnimg.cn/20190317021119161.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        data-srcset="https://img-blog.csdnimg.cn/20190317021119161.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70, https://img-blog.csdnimg.cn/20190317021119161.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 1.5x, https://img-blog.csdnimg.cn/20190317021119161.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 2x"
+        data-sizes="auto"
+        alt="https://img-blog.csdnimg.cn/20190317021119161.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        title="在这里插入图片描述" /><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://img-blog.csdnimg.cn/20190317021129392.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        data-srcset="https://img-blog.csdnimg.cn/20190317021129392.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70, https://img-blog.csdnimg.cn/20190317021129392.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 1.5x, https://img-blog.csdnimg.cn/20190317021129392.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 2x"
+        data-sizes="auto"
+        alt="https://img-blog.csdnimg.cn/20190317021129392.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        title="在这里插入图片描述" /><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://img-blog.csdnimg.cn/20190317021140172.png"
+        data-srcset="https://img-blog.csdnimg.cn/20190317021140172.png, https://img-blog.csdnimg.cn/20190317021140172.png 1.5x, https://img-blog.csdnimg.cn/20190317021140172.png 2x"
+        data-sizes="auto"
+        alt="https://img-blog.csdnimg.cn/20190317021140172.png"
+        title="在这里插入图片描述" />但这些方法要么麻烦（比如那个base64)要么没用（比如我之前试过的），所以我还是决定去瞧瞧官方给的例子，果不其然！
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://img-blog.csdnimg.cn/20190317021200951.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        data-srcset="https://img-blog.csdnimg.cn/20190317021200951.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70, https://img-blog.csdnimg.cn/20190317021200951.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 1.5x, https://img-blog.csdnimg.cn/20190317021200951.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 2x"
+        data-sizes="auto"
+        alt="https://img-blog.csdnimg.cn/20190317021200951.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        title="在这里插入图片描述" /><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://img-blog.csdnimg.cn/20190317021210481.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        data-srcset="https://img-blog.csdnimg.cn/20190317021210481.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70, https://img-blog.csdnimg.cn/20190317021210481.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 1.5x, https://img-blog.csdnimg.cn/20190317021210481.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 2x"
+        data-sizes="auto"
+        alt="https://img-blog.csdnimg.cn/20190317021210481.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        title="在这里插入图片描述" />好吧，完美解决。之前尝试失败的原因居然是 url。<strong>还有一个要注意的是，语句 background-size: cover 功能是背景图片自动缩小比例适配模块</strong>，妈妈再也不用担心我得手动调整图片比例了：）</p>
+<ul>
+<li>
+<p>出现错误json文件找不到
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://img-blog.csdnimg.cn/20190317021308813.png"
+        data-srcset="https://img-blog.csdnimg.cn/20190317021308813.png, https://img-blog.csdnimg.cn/20190317021308813.png 1.5x, https://img-blog.csdnimg.cn/20190317021308813.png 2x"
+        data-sizes="auto"
+        alt="https://img-blog.csdnimg.cn/20190317021308813.png"
+        title="在这里插入图片描述" />错误显示未找到文件，但我清楚地看到文件在那里，里面内容也没报错啊。百度无果。最后惊醒自己刚刚好像改了整个文件所在文件夹的名字&hellip;改回名字，问题解决。这一天天的都是些什么错误呀。</p>
+</li>
+<li>
+<p>小程序text文本换行 \n
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://img-blog.csdnimg.cn/20190317021400546.png"
+        data-srcset="https://img-blog.csdnimg.cn/20190317021400546.png, https://img-blog.csdnimg.cn/20190317021400546.png 1.5x, https://img-blog.csdnimg.cn/20190317021400546.png 2x"
+        data-sizes="auto"
+        alt="https://img-blog.csdnimg.cn/20190317021400546.png"
+        title="在这里插入图片描述" /></p>
+</li>
+<li>
+<p>text文本居中 使用flex 关键性语句justify-content：center;
+<code> display: flex; align-items: center; justify-content：center;</code></p>
+</li>
+</ul>
+<h2 id="尝试的第一周的学习成果">尝试的第一周的学习成果</h2>
+<p>模型图、第一个界面的完成以及小程序的基本架构
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://img-blog.csdnimg.cn/20190317021704954.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        data-srcset="https://img-blog.csdnimg.cn/20190317021704954.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70, https://img-blog.csdnimg.cn/20190317021704954.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 1.5x, https://img-blog.csdnimg.cn/20190317021704954.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 2x"
+        data-sizes="auto"
+        alt="https://img-blog.csdnimg.cn/20190317021704954.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        title="在这里插入图片描述" />在这里插入图片描述<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://img-blog.csdnimg.cn/20190317021936847.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        data-srcset="https://img-blog.csdnimg.cn/20190317021936847.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70, https://img-blog.csdnimg.cn/20190317021936847.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 1.5x, https://img-blog.csdnimg.cn/20190317021936847.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 2x"
+        data-sizes="auto"
+        alt="https://img-blog.csdnimg.cn/20190317021936847.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        title="在这里插入图片描述" /><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://img-blog.csdnimg.cn/20190317021749320.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        data-srcset="https://img-blog.csdnimg.cn/20190317021749320.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70, https://img-blog.csdnimg.cn/20190317021749320.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 1.5x, https://img-blog.csdnimg.cn/20190317021749320.png?x-oss-process=image/watermark%2ctype_ZmFuZ3poZW5naGVpdGk%2cshadow_10%2ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0%2csize_16%2ccolor_FFFFFF%2ct_70 2x"
+        data-sizes="auto"
+        alt="https://img-blog.csdnimg.cn/20190317021749320.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMjIwNDg0,size_16,color_FFFFFF,t_70"
+        title="在这里插入图片描述" /></p>
+<h2 id="下周学习计划">下周学习计划</h2>
+<!-- wp:paragraph -->
+<p>这周主要用来做小程序模型图和首页前端，对于真正的开发还没有开始吧。</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>下周会在界面写完学有余力的情况下学习云函数、云开发。</p>
+<!-- /wp:paragraph --></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2019-03-17</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/wx-week1/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://Jrycardiac.github.io/wx-week1/" data-title="微信小程序第一周周报" data-via="xxxx" data-hashtags="周报,微信小程序"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://Jrycardiac.github.io/wx-week1/" data-hashtag="周报"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://Jrycardiac.github.io/wx-week1/" data-title="微信小程序第一周周报" data-web><i class="fab fa-whatsapp fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://Jrycardiac.github.io/wx-week1/" data-title="微信小程序第一周周报"><i data-svg-src="/lib/simple-icons/icons/line.min.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://Jrycardiac.github.io/wx-week1/" data-title="微信小程序第一周周报" data-ralateuid="@cardiac_yoyoyi"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="Share on Myspace" data-sharer="myspace" data-url="https://Jrycardiac.github.io/wx-week1/" data-title="微信小程序第一周周报" data-description=""><i data-svg-src="/lib/simple-icons/icons/myspace.min.svg"></i></a><a href="javascript:void(0);" title="Share on Blogger" data-sharer="blogger" data-url="https://Jrycardiac.github.io/wx-week1/" data-title="微信小程序第一周周报" data-description=""><i class="fab fa-blogger fa-fw"></i></a><a href="javascript:void(0);" title="Share on Evernote" data-sharer="evernote" data-url="https://Jrycardiac.github.io/wx-week1/" data-title="微信小程序第一周周报"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%91%A8%E6%8A%A5/">周报</a>,&nbsp;<a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">微信小程序</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/git-solve/" class="prev" rel="prev" title="初学git的踩坑之路"><i class="fas fa-angle-left fa-fw"></i>初学git的踩坑之路</a>
+            <a href="/wx-week2/" class="next" rel="next" title="微信小程序第二周周报">微信小程序第二周周报<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">你笑起来真像好天气</div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.72.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Zoey</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
